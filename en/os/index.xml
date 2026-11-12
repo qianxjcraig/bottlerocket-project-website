@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OS on Bottlerocket</title>
+    <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/</link>
+    <description>Recent content in OS on Bottlerocket</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://qianxjcraig.github.io/bottlerocket-project-website/en/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Latest</title>
+      <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/latest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/latest/</guid>
+      <description>&lt;script&gt;&#xA;    &#xA;    (function() {&#xA;        &#xA;        var currentVersion = [];&#xA;        var currentURLPrefix = &#34;/en/os/1.69.x&#34;;&#xA;        &#xA;        &#xA;        var docs_location;&#xA;        &#xA;        if (window.location &amp;&amp; window.location.hash) {&#xA;            &#xA;            docs_location = window.location.hash.slice(1); &#xA;            &#xA;            if (docs_location[docs_location.length-1] !== &#39;/&#39;) { &#xA;                docs_location = docs_location + &#39;/&#39;;&#xA;            }&#xA;            &#xA;            if (currentVersion.indexOf(docs_location) !== -1) {&#xA;                &#xA;                location.assign(currentURLPrefix + docs_location);&#xA;            } else {&#xA;                &#xA;                location.assign(currentURLPrefix);&#xA;            }&#xA;        }&#xA;    })();&#xA;&lt;/script&gt;</description>
+    </item>
+  </channel>
+</rss>

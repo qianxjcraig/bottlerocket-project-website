@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS on Bottlerocket</title>
+    <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.15.x/install/quickstart/aws/</link>
+    <description>Recent content in AWS on Bottlerocket</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.15.x/install/quickstart/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazon ECS</title>
+      <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.15.x/install/quickstart/aws/ecs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.15.x/install/quickstart/aws/ecs/</guid>
+      <description>&lt;p&gt;In this quickstart, we use a number of techniques/tools like &lt;code&gt;jq&lt;/code&gt; and environment variables to make the quickstart experience as simple and straightforward as possible.&#xA;These tools are not absolutely necessary to use Bottlerocket on ECS.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;p&gt;There are some preliminary tasks to complete in order to use ECS.&#xA;You need to both set up your AWS account for use with ECS and have an IAM role for ECS configured:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Amazon EKS</title>
+      <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.15.x/install/quickstart/aws/k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.15.x/install/quickstart/aws/k8s/</guid>
+      <description>&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;p&gt;In order to set up a Bottlerocket cluster on EKS, you will need the latest versions of the following tools installed:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://eksctl.io/&#34;&gt;&lt;code&gt;eksctl&lt;/code&gt;&lt;/a&gt;: Used to create EKS clusters.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://kubernetes.io/docs/tasks/tools/#kubectl&#34;&gt;&lt;code&gt;kubectl&lt;/code&gt;&lt;/a&gt;: Used to interact with resources within a Kubernetes cluster.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html#getting-started-install-instructions&#34;&gt;&lt;code&gt;aws-cli&lt;/code&gt;&lt;/a&gt;: Used to interact with AWS services.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html&#34;&gt;SSM Session Manager Plugin for AWS CLI&lt;/a&gt;: Used to enter SSM sessions on Bottlerocket nodes through the AWS CLI.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;cluster-setup&#34;&gt;Cluster Setup&lt;/h2&gt;&#xA;&lt;p&gt;There are two main steps to setting up an EKS cluster: creating the configuration file and applying the configuration file using &lt;code&gt;eksctl&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Host Containers</title>
+      <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.15.x/install/quickstart/aws/host-containers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.15.x/install/quickstart/aws/host-containers/</guid>
+      <description>&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;An AWS EC2 Instance ID (begins with &lt;code&gt;i-&lt;/code&gt;) of a Bottlerocket instance&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html#getting-started-install-instructions&#34;&gt;&lt;code&gt;aws-cli&lt;/code&gt;&lt;/a&gt;: Used to interact with AWS services.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html&#34;&gt;SSM Session Manager Plugin for AWS CLI&lt;/a&gt;: Used to enter SSM sessions on Bottlerocket nodes through the AWS CLI.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;interacting-with-a-bottlerocket-node-through-host-containers&#34;&gt;Interacting With a Bottlerocket Node Through Host Containers&lt;/h2&gt;&#xA;&lt;p&gt;Run the following command to enter an SSM session on the node:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;aws ssm start-session --target INSTANCE_ID&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;INSTANCE_ID&lt;/code&gt; with the instance ID you picked earlier.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1.3.x (Current) on Bottlerocket</title>
+    <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/brupop/1.3.x/</link>
+    <description>Recent content in 1.3.x (Current) on Bottlerocket</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://qianxjcraig.github.io/bottlerocket-project-website/en/brupop/1.3.x/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Concepts</title>
+      <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/brupop/1.3.x/concepts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qianxjcraig.github.io/bottlerocket-project-website/en/brupop/1.3.x/concepts/</guid>
+      <description>&lt;p&gt;You can update Bottlerocket in a couple of ways:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;node replacement&lt;/strong&gt; where new instances with a new version of the OS replace nodes with older versions of the OS,&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;in-place updates&lt;/strong&gt; where the node downloads and reboots into a new version of the OS while maintaining the same instance/machine.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;There is no single preferred nor advised method to update a node; both methods have pros and cons depending on your situation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Operate &amp; Observe</title>
+      <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/brupop/1.3.x/operate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qianxjcraig.github.io/bottlerocket-project-website/en/brupop/1.3.x/operate/</guid>
+      <description>&lt;p&gt;After installation on your cluster Brupop runs in the background and generally requires no intervention.&#xA;Your nodes will check for updates and apply them according to your configuration and the Bottlerocket update waves.&lt;/p&gt;&#xA;&lt;p&gt;However, you can observe the status of the updates by &lt;a href=&#34;https://qianxjcraig.github.io/bottlerocket-project-website/en/brupop/1.3.x/operate/#adhoc-query&#34;&gt;adhoc query&lt;/a&gt; or setup &lt;a href=&#34;https://qianxjcraig.github.io/bottlerocket-project-website/en/brupop/1.3.x/operate/#on-going-monitoring&#34;&gt;on-going monitoring&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;adhoc-query&#34;&gt;Adhoc Query&lt;/h2&gt;&#xA;&lt;p&gt;If you want to see the update status of your nodes, use &lt;code&gt;kubectl&lt;/code&gt; to get the custom resource &lt;code&gt;brs&lt;/code&gt; :&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl get brs --namespace brupop-bottlerocket-aws&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;kubectl&lt;/code&gt; returns the &lt;a href=&#34;../concepts/#states&#34;&gt;state&lt;/a&gt;, current version, target state, and target version.&#xA;For example:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Troubleshoot</title>
+      <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/brupop/1.3.x/troubleshoot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qianxjcraig.github.io/bottlerocket-project-website/en/brupop/1.3.x/troubleshoot/</guid>
+      <description>&lt;h2 id=&#34;debugging-information&#34;&gt;Debugging information&lt;/h2&gt;&#xA;&lt;p&gt;Brupop’s components emit useful logs for debugging and troubleshooting.&lt;/p&gt;&#xA;&lt;h3 id=&#34;api-server-deployment-logs&#34;&gt;API Server deployment logs&lt;/h3&gt;&#xA;&lt;p&gt;Searching through the API Server’s deployment logs for a particular Node ID will yield the mutations to the node.&#xA;Assuming the default namespace you can retrieve these by running:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl logs deployment/brupop-apiserver --namespace brupop-bottlerocket-aws &#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;agent-logs&#34;&gt;Agent logs&lt;/h3&gt;&#xA;&lt;p&gt;Logs from the agent show the specific update actions taken on a particular node.&lt;/p&gt;&#xA;&lt;p&gt;First, find the node in the list of the Brupop agent pods (assuming the default namespace):&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

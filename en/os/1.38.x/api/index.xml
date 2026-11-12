@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API on Bottlerocket</title>
+    <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.38.x/api/</link>
+    <description>Recent content in API on Bottlerocket</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.38.x/api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>API Endpoint Reference</title>
+      <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.38.x/api/endpoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.38.x/api/endpoints/</guid>
+      <description>&lt;p&gt;The following output is generated from &lt;a href=&#34;https://github.com/bottlerocket-os/bottlerocket/blob/develop/sources/api/openapi.yaml&#34;&gt;Bottlerocket&amp;rsquo;s OpenAPI Spec&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&#xA;&lt;div id=&#34;docsy_swagger_ui&#34;&gt;&lt;/div&gt;&#xA;&lt;script&gt;&#xA;  window.onload = function () {&#xA;    const ui = SwaggerUIBundle({&#xA;      url: &#34;/external/openapi/1.22.x/openapi.yaml&#34;,&#xA;      dom_id: &#39;#docsy_swagger_ui&#39;,&#xA;      presets: [&#xA;        SwaggerUIBundle.presets.apis,&#xA;        SwaggerUIStandalonePreset&#xA;      ]&#xA;    });&#xA;    window.ui = ui;&#xA;  };&#xA;&lt;/script&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Updating on Bottlerocket</title>
+    <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.28.x/update/</link>
+    <description>Recent content in Updating on Bottlerocket</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.28.x/update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guidelines for Updating In-Place</title>
+      <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.28.x/update/guidelines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.28.x/update/guidelines/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;There are some guidelines and considerations to keep in mind when updating your Bottlerocket nodes &lt;em&gt;in-place&lt;/em&gt;.&#xA;Some movements between versions are updates, some are not updates, and there are some caveats you may need to consider based on the history of the project.&lt;/p&gt;&#xA;&lt;h2 id=&#34;update-paths&#34;&gt;Update Paths&lt;/h2&gt;&#xA;&lt;p&gt;Certain movements between releases of Bottlerocket are accessible through an &lt;em&gt;in-place&lt;/em&gt; update path.&lt;/p&gt;&#xA;&lt;h3 id=&#34;between-minor-or-patch-versions-of-the-same-variant&#34;&gt;Between Minor or Patch Versions of the Same Variant&lt;/h3&gt;&#xA;&lt;p&gt;With the exception of moving between major versions and a &lt;a href=&#34;https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.28.x/update/guidelines/#too-many-releases-between-versions&#34;&gt;caveat discussed below&lt;/a&gt;, it is possible to update &lt;em&gt;in-place&lt;/em&gt; from one released version of a variant to another released version of the same variant.&#xA;In particular, the following update paths work:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Locking to a Specific Release</title>
+      <link>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.28.x/update/locking-to-a-specific-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.28.x/update/locking-to-a-specific-release/</guid>
+      <description>&lt;p&gt;Locking your Bottlerocket nodes to a specific release is possible using the Bottlerocket Settings API.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;A quick explanation of the &lt;code&gt;apiclient&lt;/code&gt; command used below:&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Two settings are set: &lt;code&gt;updates.version-lock&lt;/code&gt; and &lt;code&gt;updates.ignore-waves&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;updates.version-lock&lt;/code&gt;: which version of Bottlerocket to lock to when &lt;code&gt;apiclient&lt;/code&gt; checks for updates.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;updates.ignore-waves&lt;/code&gt;: ignore the &lt;a href=&#34;https://github.com/bottlerocket-os/bottlerocket/tree/develop/sources/updater/waves&#34;&gt;update waves behavior&lt;/a&gt; and update the Bottlerocket node immediately.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;To create an SSM Command Document, follow the steps in the &lt;a href=&#34;https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-console.html&#34;&gt;AWS Systems Manager User Guide: &amp;ldquo;Create an SSM document (console)&amp;rdquo;&lt;/a&gt;.&#xA;Remember to select &amp;ldquo;YAML&amp;rdquo; in the &amp;ldquo;Content&amp;rdquo; box, since the &lt;a href=&#34;https://qianxjcraig.github.io/bottlerocket-project-website/en/os/1.28.x/update/locking-to-a-specific-release/#ssm-command-document-lock-to-a-specific-release&#34;&gt;SSM Command Document below&lt;/a&gt; is formatted in YAML.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
